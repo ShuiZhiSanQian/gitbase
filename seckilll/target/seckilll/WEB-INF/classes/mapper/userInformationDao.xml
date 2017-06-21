@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="org.seckill.dao.userInformationDao" >
+      <!-- 目的：为DAO接口方法提供sql语句配置 -->
+        <!-- 具体的sql -->
+        <insert id="saveUserInformation" >
+        insert ignore into
+          user_information
+           (user_phone,password,vocation,favorate) 
+           values
+            (#{userphone},#{password},#{vocation},#{favorate})
+        </insert>
+
+
+    </mapper>
